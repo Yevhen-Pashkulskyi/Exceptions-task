@@ -1,6 +1,6 @@
-package bankAccount;
+package java.org.example.oldVersion.bankAccount;
 
-import exceptions.InsufficientFundsException;
+import java.org.example.oldVersion.exceptions.InsufficientFundsException;
 
 import java.util.Scanner;
 

@@ -1,6 +1,6 @@
-package rangeWorkingTemperature;
+package java.org.example.oldVersion.rangeWorkingTemperature;
 
-import exceptions.TemperatureOutOfRangeException;
+import java.org.example.oldVersion.exceptions.TemperatureOutOfRangeException;
 
 import java.util.Scanner;
 

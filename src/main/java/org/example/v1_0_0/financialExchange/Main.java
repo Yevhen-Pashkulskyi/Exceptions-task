@@ -1,4 +1,4 @@
-package financialExchange;
+package java.org.example.oldVersion.financialExchange;
 
 import java.util.Scanner;
 
