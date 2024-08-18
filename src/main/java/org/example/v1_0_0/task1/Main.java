@@ -1,4 +1,4 @@
-package java.org.example.oldVersion.task1;
+package org.example.v1_0_0.task1;
 
 import java.util.Scanner;
 
