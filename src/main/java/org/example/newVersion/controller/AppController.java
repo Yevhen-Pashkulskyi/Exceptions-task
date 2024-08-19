@@ -7,8 +7,8 @@ import org.example.newVersion.model.InputData;
 import org.example.newVersion.view.AppView;
 
 public class AppController {
-    InputData inputData;
-    AppView view;
+    private InputData inputData;
+    private AppView view;
 
     public void run() {
         view = new AppView();
@@ -18,22 +18,18 @@ public class AppController {
         implementation(choice);
     }
 
-    private void implementation(int choice) throws NumberException {
+    private void implementation(int choice) {
         DataValidator dV = new DataValidator();
-        String data;
         switch (choice) {
             case 1:
                 System.out.print("\nВведіть число: ");
-                String number = inputData.getData();
-                try {
-                    handleDataSingle(number);
-                    System.out.println("This valid number: " + number);
-                }catch (NumberException e){
-                    System.out.println(e.getMessage());
-                }
+                dV.valNumber(inputData.getData());
+                run();
                 break;
             case 2:
                 view.output(dV.validateQuantity(inputData.getData()));
+                break;
+            case 0:
                 break;
         }
     }
@@ -46,6 +42,7 @@ public class AppController {
             return e.getMessage();
         }
     }
+
     private String handleDataSingle(String data) {
         DataValidator dv = new DataValidator();
         try {
