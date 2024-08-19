@@ -8,7 +8,7 @@ public class DataValidator {
     private final int MENU_TASK_ITEMS = 4;
 
     public String validateNumber(String number) throws NumberException {
-        if (!number.matches(INPUT_REGEX)) {
+        if (!number.matches(INPUT_REGEX) || number.isEmpty()) {
             throw new NumberException("Invalid number " + number);
         }
         return number;
