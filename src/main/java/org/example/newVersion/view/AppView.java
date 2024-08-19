@@ -5,4 +5,7 @@ public class AppView {
         System.out.print("1) task1\n2) task2\n3) task3\n4) task4\n");
         System.out.print("Виберіть яке завдання потрібно зробити: ");
     }
+    public void output(String text){
+        System.out.println(text);
+    }
 }
