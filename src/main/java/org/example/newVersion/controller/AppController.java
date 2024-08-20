@@ -1,9 +1,9 @@
 package org.example.newVersion.controller;
 
+import org.example.newVersion.entity.StockExchange;
 import org.example.newVersion.exception.NumberException;
 import org.example.newVersion.exception.QuantityException;
 import org.example.newVersion.model.DataValidator;
-import org.example.newVersion.entity.StockExchange;
 import org.example.newVersion.utility.InputData;
 import org.example.newVersion.view.AppView;
 
@@ -31,7 +31,14 @@ public class AppController {
                 StockExchange se = new StockExchange();
                 view.msgExc();
                 se.setDay(Integer.parseInt(dV.validateNumber(inputData.getData())));
-
+                String[] prices = inputData.prices(se.getDay());
+                System.out.print("Ціну якого дня знайти: ");
+                try{
+                    view.output(dV.indexArr(prices, Integer.parseInt(dV.validateNumber(inputData.getData()))));
+                }catch (NumberException e){
+                    e.getMessage();
+                }
+                run();
                 break;
             case 0:
                 break;

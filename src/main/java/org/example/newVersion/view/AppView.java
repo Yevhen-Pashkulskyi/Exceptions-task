@@ -10,7 +10,7 @@ public class AppView {
         System.out.print("Виберіть завдання:");
     }
     public void msgExc(){
-        System.out.println("Скільки днів взяти у підрахунок: ");
+        System.out.print("Скільки днів взяти у підрахунок: ");
     }
     public void output(String text){
         System.out.println(text);
