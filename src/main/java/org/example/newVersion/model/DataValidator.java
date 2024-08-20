@@ -2,11 +2,14 @@ package org.example.newVersion.model;
 
 import org.example.newVersion.exception.NumberException;
 import org.example.newVersion.exception.QuantityException;
+import org.example.newVersion.exception.RangeTemperatureException;
 
 public class DataValidator {
     private final String INPUT_REGEX = "^[0-9]*$";
     private final int MENU_TASK_ITEMS = 4;
     private final String USD = "$";
+    private final int MIN_TEMPERATURE = -10;
+    private final int MAX_TEMPERATURE = 35;
 
     public String validateNumber(String number) throws NumberException {
         if (!number.matches(INPUT_REGEX) || number == null || number.isEmpty()) {
@@ -40,5 +43,21 @@ public class DataValidator {
             System.out.print("Ціни за " + "'" + search + "'" + " днем не існує");
         }
         return day + " " + USD;
+    }
+
+    private String validTemperature(int temperature) {
+        if (temperature < MIN_TEMPERATURE || temperature > MAX_TEMPERATURE) {
+            throw new QuantityException("Invalid temperature " + temperature);
+        } else {
+            return temperature + " is ok";
+        }
+    }
+
+    public String handleTemperature(int temperature) {
+        try {
+            return validTemperature(temperature);
+        } catch (RangeTemperatureException e) {
+            return e.getMessage();
+        }
     }
 }

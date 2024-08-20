@@ -52,7 +52,10 @@ public class AppController {
                 run();
                 break;
             case 4:
-
+                System.out.print("Enter temperature: ");
+                view.output(dV.handleTemperature
+                        (Integer.parseInt(dV.validateNumber(inputData.getData()))));
+                run();
                 break;
             case 0:
                 break;
