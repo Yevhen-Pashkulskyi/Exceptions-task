@@ -3,7 +3,8 @@ package org.example.newVersion.controller;
 import org.example.newVersion.exception.NumberException;
 import org.example.newVersion.exception.QuantityException;
 import org.example.newVersion.model.DataValidator;
-import org.example.newVersion.model.InputData;
+import org.example.newVersion.entity.StockExchange;
+import org.example.newVersion.utility.InputData;
 import org.example.newVersion.view.AppView;
 
 public class AppController {
@@ -27,7 +28,10 @@ public class AppController {
                 run();
                 break;
             case 2:
-                view.output(dV.validateQuantity(inputData.getData()));
+                StockExchange se = new StockExchange();
+                view.msgExc();
+                se.setDay(Integer.parseInt(dV.validateNumber(inputData.getData())));
+
                 break;
             case 0:
                 break;
