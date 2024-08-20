@@ -4,7 +4,7 @@ public class AppView {
     public void menu(){
         System.out.print("1) Перевірка на наявність числа\n" +
                 "2) Пошук ціни\n" +
-                "3) task3\n" +
+                "3) Розрахунок\n" +
                 "4) task4\n" +
                 "0) closed\n");
         System.out.print("Виберіть завдання:");
