@@ -5,13 +5,14 @@ import org.example.newVersion.exception.QuantityException;
 import org.example.newVersion.exception.RangeTemperatureException;
 
 public class DataValidator {
-    private final String INPUT_REGEX = "^[0-9]*$";
+    private final String INPUT_REGEX = "^[0-9]*[.,]?[0-9]+$";
     private final int MENU_TASK_ITEMS = 4;
     private final String USD = "$";
     private final int MIN_TEMPERATURE = -10;
     private final int MAX_TEMPERATURE = 35;
+    private final String CELSIUS = "°C";
 
-    public String validateNumber(String number) throws NumberException {
+    public String validIntNumber(String number) throws NumberException {
         if (!number.matches(INPUT_REGEX) || number == null || number.isEmpty()) {
             throw new NumberException("Invalid number " + number);
         }
@@ -47,9 +48,9 @@ public class DataValidator {
 
     private String validTemperature(int temperature) {
         if (temperature < MIN_TEMPERATURE || temperature > MAX_TEMPERATURE) {
-            throw new QuantityException("Invalid temperature " + temperature);
+            throw new RangeTemperatureException("\n" + temperature + CELSIUS + " above the norm!\n");
         } else {
-            return temperature + " is ok";
+            return "\n" + temperature + CELSIUS + " is ok\n";
         }
     }
 

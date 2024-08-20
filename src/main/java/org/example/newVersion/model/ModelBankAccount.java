@@ -12,6 +12,14 @@ public class ModelBankAccount {
             return e.getMessage();
         }
         balance = balance - expense;
-        return String.format("%.2f", balance);
+        return String.format("\nЗалишок %.2f$\n", balance);
     }
+
+    public String replaceComaToDot(String expense) {
+        if (expense.contains(",")) {
+            expense = expense.replace(",", ".");
+        }
+        return expense;
+    }
+
 }
