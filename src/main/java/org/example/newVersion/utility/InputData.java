@@ -12,8 +12,7 @@ public class InputData {
     public String[] prices(int day){
         String[] prices = new String[day];
         for(int i = 0; i < day; i++){
-            prices[i] = new DecimalFormat("#.##")
-                    .format(new RandomNumbers().randomNumbers());
+            prices[i] = Rounder.rounderValue(new RandomNumbers().randomNumbers());
         }
         return prices;
     }
