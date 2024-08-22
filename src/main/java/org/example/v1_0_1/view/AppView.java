@@ -1,4 +1,4 @@
-package org.example.newVersion.view;
+package org.example.v1_0_1.view;
 
 public class AppView {
     public void menu(){
@@ -6,7 +6,7 @@ public class AppView {
                 "2) Пошук ціни в конкретний день\n" +
                 "3) Розрахунок банковского рахунку\n" +
                 "4) Перевірка діапазону температури\n" +
-                "0) closed\n");
+                "0) Закрити програму\n");
         System.out.print("Виберіть завдання:");
     }
     public void msgExc(){

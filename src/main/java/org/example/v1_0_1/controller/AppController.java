@@ -1,12 +1,12 @@
-package org.example.newVersion.controller;
+package org.example.v1_0_1.controller;
 
-import org.example.newVersion.entity.BankAccount;
-import org.example.newVersion.entity.StockExchange;
-import org.example.newVersion.exception.custom.NumberException;
-import org.example.newVersion.exception.DataValidator;
-import org.example.newVersion.utility.InputData;
-import org.example.newVersion.utility.Replace;
-import org.example.newVersion.view.AppView;
+import org.example.v1_0_1.entity.BankAccount;
+import org.example.v1_0_1.entity.StockExchange;
+import org.example.v1_0_1.exception.custom.NumberException;
+import org.example.v1_0_1.exception.DataValidator;
+import org.example.v1_0_1.utility.InputData;
+import org.example.v1_0_1.utility.Replace;
+import org.example.v1_0_1.view.AppView;
 
 public class AppController {
     private InputData inputData;
@@ -23,8 +23,8 @@ public class AppController {
             implementation(choice);
         } catch (NumberFormatException e) {
             System.out.println("\n" + e.getMessage() + "\n");
+            run();
         }
-        run();
     }
 
     private void implementation(int choice) {

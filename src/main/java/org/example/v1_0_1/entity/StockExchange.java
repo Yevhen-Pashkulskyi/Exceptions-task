@@ -1,4 +1,4 @@
-package org.example.newVersion.entity;
+package org.example.v1_0_1.entity;
 
 public class StockExchange {
     private double price;

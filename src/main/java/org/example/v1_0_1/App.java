@@ -1,6 +1,6 @@
-package org.example.newVersion;
+package org.example.v1_0_1;
 
-import org.example.newVersion.controller.AppController;
+import org.example.v1_0_1.controller.AppController;
 
 public class App {
     public static void main(String[] args) {

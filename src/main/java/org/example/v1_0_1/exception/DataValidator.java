@@ -1,8 +1,8 @@
-package org.example.newVersion.exception;
+package org.example.v1_0_1.exception;
 
-import org.example.newVersion.exception.custom.NumberException;
-import org.example.newVersion.exception.custom.QuantityException;
-import org.example.newVersion.exception.custom.RangeTemperatureException;
+import org.example.v1_0_1.exception.custom.NumberException;
+import org.example.v1_0_1.exception.custom.QuantityException;
+import org.example.v1_0_1.exception.custom.RangeTemperatureException;
 
 public class DataValidator {
     private final String INPUT_REGEX = "^[-+]?[0-9]*[.,]?[0-9]+(?:[eE][-+]?[0-9]+)?$";

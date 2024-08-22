@@ -1,6 +1,5 @@
-package org.example.newVersion.utility;
+package org.example.v1_0_1.utility;
 
-import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class InputData {

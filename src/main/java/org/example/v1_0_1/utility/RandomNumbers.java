@@ -1,4 +1,4 @@
-package org.example.newVersion.utility;
+package org.example.v1_0_1.utility;
 
 import java.util.Random;
 
