@@ -8,9 +8,9 @@ public class InputData {
         return new Scanner(System.in).nextLine().trim();
     }
 
-    public String[] prices(int day){
+    public String[] prices(int day) {
         String[] prices = new String[day];
-        for(int i = 0; i < day; i++){
+        for (int i = 0; i < day; i++) {
             prices[i] = Rounder.rounderValue(new RandomNumbers().randomNumbers());
         }
         return prices;
