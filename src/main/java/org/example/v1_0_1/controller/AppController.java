@@ -47,8 +47,8 @@ public class AppController {
                     view.output(dV.indexArr(prices,
                             Integer.parseInt(dV.validIntNumber(
                                     Replace.replaceComaToDot(inputData.getData())))));
-                } catch (NumberException e) {
-                    e.getMessage();
+                } catch (NumberFormatException e) {
+                    System.out.println("\n" + e.getMessage() + "\n");
                 }
                 run();
                 break;
